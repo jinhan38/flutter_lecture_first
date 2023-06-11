@@ -1,4 +1,5 @@
 
+import 'package:flutter_lecture_first/ch1/collections.dart';
 import 'package:flutter_lecture_first/ch1/conditional.dart';
 import 'package:flutter_lecture_first/ch1/method.dart';
 import 'package:flutter_lecture_first/ch1/operator.dart';
@@ -11,7 +12,9 @@ void main() {
   // Operator();
   //
   // Method();
+  //
+  // Conditional();
 
-  Conditional();
+  Collections();
 
 }
