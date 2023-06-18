@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lecture_first/ch3/container_screen.dart';
+import 'package:flutter_lecture_first/ch3/image_screen.dart';
 import 'package:flutter_lecture_first/ch3/scaffold_screen.dart';
 import 'package:flutter_lecture_first/ch3/text_screen.dart';
 
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           button(page: RowScreen(), name: "row"),
           button(page: ScaffoldScreen(), name: "scaffold"),
           button(page: TextScreen(), name: "text"),
+          button(page: ImageScreen(), name: "image"),
         ],
       ),
     );

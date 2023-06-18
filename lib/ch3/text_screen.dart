@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class TextScreen extends StatelessWidget {
   const TextScreen({super.key});
 
+  // https://jinhan38.com/131
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("TextScreen"),
       ),
-      body:  Column(
+      body: Column(
         children: [
           const Row(
             children: [
@@ -24,7 +25,6 @@ class TextScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
           advanced(),
@@ -33,8 +33,8 @@ class TextScreen extends StatelessWidget {
     );
   }
 
-  Widget advanced(){
-     return Center(
+  Widget advanced() {
+    return Center(
       child: Container(
         color: Colors.green,
         alignment: Alignment.center,
