@@ -1,10 +1,13 @@
 import 'package:flutter_lecture_first/ch2/animal/animal.dart';
 import 'package:flutter_lecture_first/ch2/animal/animal_interface.dart';
 import 'package:flutter_lecture_first/ch2/animal/dog_interface.dart';
+import 'package:flutter_lecture_first/ch2/animal/item.dart';
 
 /// 상속은 1개만 가능
 /// interface 여러개 가능
-class Bird extends Animal implements AnimalInterface, DogInterface {
+class Bird extends Animal
+    with Item, Item2
+    implements AnimalInterface, DogInterface {
   /// 생성자
   /// 생성자는 해당 클래스를 생성할 때 사용하는 함수
   /// super 라는 키워드는 부모 클래스의 생성자에 값을 입력
@@ -43,4 +46,15 @@ class Bird extends Animal implements AnimalInterface, DogInterface {
 
   @override
   void play() {}
+
+  @override
+  void wakeUp() {}
+
+  @override
+  void nothing() {}
+
+// @override
+// void talk() {
+//   super.talk();
+// }
 }
