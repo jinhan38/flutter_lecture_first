@@ -5,10 +5,6 @@ class HomeWorkCar {
 
     benz1.sell2(60444, "aaa");
 
-    // benz1.run();
-    // benz1.stop();
-    // benz1.repair();
-    // benz1.sell();
     benz1
       ..run()
       ..stop()
