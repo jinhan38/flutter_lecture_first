@@ -52,14 +52,15 @@ void main() {
   // computer.sale();
   //
   // computer.sum();
+  //
+  // Americano americano = Americano("프리미엄 아메리카노", 8000, false, false);
+  // americano.sale();
+  // americano.service();
+  // americano.refund();
+  //
+  // Latte latte = Latte("저렴한 라떼", 1500, true, true);
+  // latte.service();
+  // latte.refund();
 
-  Americano americano = Americano("프리미엄 아메리카노", 8000, false, false);
-  americano.sale();
-  americano.service();
-  americano.refund();
-
-  Latte latte = Latte("저렴한 라떼", 1500, true, true);
-  latte.service();
-  latte.refund();
-
+  Conditional();
 }
