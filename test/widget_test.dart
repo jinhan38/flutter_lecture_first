@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_lecture_first/ch1/collections.dart';
 import 'package:flutter_lecture_first/ch1/conditional.dart';
 import 'package:flutter_lecture_first/ch1/for_loop.dart';
 import 'package:flutter_lecture_first/ch1/method.dart';
 import 'package:flutter_lecture_first/ch1/operator.dart';
 import 'package:flutter_lecture_first/ch1/variable.dart';
+import 'package:flutter_lecture_first/ch2/animal/bird.dart';
+import 'package:flutter_lecture_first/ch2/animal/dog.dart';
 import 'package:flutter_lecture_first/ch2/coffee/americano.dart';
 import 'package:flutter_lecture_first/ch2/coffee/latte.dart';
 import 'package:flutter_lecture_first/ch2/person.dart';
@@ -61,6 +64,18 @@ void main() {
   // Latte latte = Latte("저렴한 라떼", 1500, true, true);
   // latte.service();
   // latte.refund();
+  //
+  // Conditional();
 
-  Conditional();
+  /// Bird 클래스 생성
+  Bird bird1 = Bird("비둘기", 2);
+
+  /// run 함수 호출
+  bird1.run();
+
+  Dog dog1 = Dog(name: "흰둥이", age: 3);
+  dog1.run();
+  dog1.swim();
+  dog1.eat();
+  dog1.sleep();
 }
