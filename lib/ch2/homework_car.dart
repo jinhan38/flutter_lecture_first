@@ -3,6 +3,8 @@ class HomeWorkCar {
     Benz benz1 = Benz(price: 50000, name: "벤츄리", owner: "김진한");
     Benz benz2 = Benz(price: 150000, name: "비싼 벤츠", owner: "김진한2");
 
+    benz1.sell2(60444, "aaa");
+
     // benz1.run();
     // benz1.stop();
     // benz1.repair();
@@ -66,7 +68,13 @@ abstract class CarInterface {
   void sell();
 }
 
-class Benz extends Car implements CarInterface {
+mixin CarInterface2 on Car {
+  void sell2(double price, String name) {
+    print('$name를 $price에 판매했습니다.');
+  }
+}
+
+class Benz extends Car with CarInterface2 implements CarInterface {
   Benz({
     required double price,
     required String name,
