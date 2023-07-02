@@ -10,3 +10,6 @@
 -> setState는 stateful 위젯에만 있음
 -> setState로 화면을 갱신하면 작업이 많아지지 않나?
    State가 변경된 애들만 다시 그려줌
+
+
+LifeCycle(생명주기)
