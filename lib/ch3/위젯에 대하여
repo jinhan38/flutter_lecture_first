@@ -4,5 +4,9 @@
 네모박스, 글자, 이미지 -> 모든 것이 위젯
 
 위젯은 크게 두 가지로 구분 가능
-1. stateless 위젯
+1. stateless 위젯 -> 자체적으로는 화면/UI 변경 불가
 2. stateful 위젯
+-> setState 화면을 갱신한다.
+-> setState는 stateful 위젯에만 있음
+-> setState로 화면을 갱신하면 작업이 많아지지 않나?
+   State가 변경된 애들만 다시 그려줌

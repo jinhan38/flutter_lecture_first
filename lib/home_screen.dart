@@ -7,6 +7,7 @@ import 'package:flutter_lecture_first/ch4/button_screen.dart';
 
 import 'ch3/column_screen.dart';
 import 'ch3/row_screen.dart';
+import 'ch4/text_form_field_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,16 +23,19 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("홈"),
       ),
-      body: Column(
-        children: [
-          button(page: ContainerScreen(), name: "container"),
-          button(page: ColumnScreen(), name: "column"),
-          button(page: RowScreen(), name: "row"),
-          button(page: ScaffoldScreen(), name: "scaffold"),
-          button(page: TextScreen(), name: "text"),
-          button(page: ImageScreen(), name: "image"),
-          button(page: ButtonScreen(), name: "button"),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            button(page: ContainerScreen(), name: "container"),
+            button(page: ColumnScreen(), name: "column"),
+            button(page: RowScreen(), name: "row"),
+            button(page: ScaffoldScreen(), name: "scaffold"),
+            button(page: TextScreen(), name: "text"),
+            button(page: ImageScreen(), name: "image"),
+            button(page: ButtonScreen(), name: "button"),
+            button(page: TextFormFieldScreen(), name: "textFormField"),
+          ],
+        ),
       ),
     );
   }

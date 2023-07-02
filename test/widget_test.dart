@@ -3,6 +3,7 @@ import 'package:flutter_lecture_first/ch1/collections.dart';
 import 'package:flutter_lecture_first/ch1/conditional.dart';
 import 'package:flutter_lecture_first/ch1/for_loop.dart';
 import 'package:flutter_lecture_first/ch1/method.dart';
+import 'package:flutter_lecture_first/ch1/null_safety.dart';
 import 'package:flutter_lecture_first/ch1/operator.dart';
 import 'package:flutter_lecture_first/ch1/variable.dart';
 import 'package:flutter_lecture_first/ch2/animal/bird.dart';
@@ -79,6 +80,21 @@ void main() {
   // dog1.swim();
   // dog1.eat();
   // dog1.sleep();
+  //
+  // HomeWorkCar();
 
-  HomeWorkCar();
+  var nullSafety = NullSafety();
+
+  nullSafety.age = 40;
+  nullSafety.name = "홍길동";
+
+  nullSafety.age2 = 50;
+  nullSafety.age2 = null;
+  nullSafety.name2 = null;
+
+  /// nullableType으로 선언을 하면 null로 인식
+  /// non-nullableType인데 초기화를 안하면 오류 발생
+  NullSafety? ns2;
+
+  print('ns2 : $ns2');
 }
