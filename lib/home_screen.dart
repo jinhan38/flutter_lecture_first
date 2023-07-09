@@ -6,6 +6,7 @@ import 'package:flutter_lecture_first/ch3/text_screen.dart';
 import 'package:flutter_lecture_first/ch4/button_screen.dart';
 import 'package:flutter_lecture_first/ch4/gridview_screen.dart';
 import 'package:flutter_lecture_first/ch4/listview_screen.dart';
+import 'package:flutter_lecture_first/ch5/bottom_navigation_bar_screen.dart';
 import 'package:flutter_lecture_first/ch5/tabbar_screen.dart';
 
 import 'ch3/column_screen.dart';
@@ -50,6 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 page: DefaultTabControllerScreen(),
                 name: "defaultTabControllerScreen"),
             button(page: UiExamScreen(), name: 'UiExamScreen'),
+            button(
+                page: BottomNavigationBarScreen(),
+                name: 'BottomNavigationBarScreen'),
           ],
         ),
       ),
