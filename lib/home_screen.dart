@@ -14,6 +14,7 @@ import 'ch4/single_scroll_screen.dart';
 import 'ch4/text_form_field_screen.dart';
 import 'ch5/default_tab_controller_screen.dart';
 import 'ch5/pageview_screen.dart';
+import 'ch5/ui_exam.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -48,6 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             button(
                 page: DefaultTabControllerScreen(),
                 name: "defaultTabControllerScreen"),
+            button(page: UiExamScreen(), name: 'UiExamScreen'),
           ],
         ),
       ),

@@ -18,7 +18,7 @@ class _DefaultTabControllerScreenState extends State<DefaultTabControllerScreen>
       length: 3,
       vsync: this,
       initialIndex: 1,
-      animationDuration: const Duration(milliseconds: 500),
+      // animationDuration: const Duration(milliseconds: 500),
     );
 
     tabController.addListener(() {
@@ -48,6 +48,26 @@ class _DefaultTabControllerScreenState extends State<DefaultTabControllerScreen>
             SizedBox(
               height: 300,
               child: _tabBarView(),
+            ),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    tabController.index = 0;
+                  },
+                  child: Text("이동"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    tabController.animateTo(
+                      2,
+                      duration: Duration(milliseconds: 2000),
+                      curve: Curves.elasticOut,
+                    );
+                  },
+                  child: Text("이동 애니메이션"),
+                ),
+              ],
             ),
           ],
         ),
