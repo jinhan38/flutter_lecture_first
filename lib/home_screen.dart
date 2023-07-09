@@ -11,6 +11,7 @@ import 'ch3/column_screen.dart';
 import 'ch3/row_screen.dart';
 import 'ch4/single_scroll_screen.dart';
 import 'ch4/text_form_field_screen.dart';
+import 'ch5/pageview_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -40,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             button(page: SingleScrollScreen(), name: "singleScrollScreen"),
             button(page: ListViewScreen(), name: "listViewScreen"),
             button(page: GridViewScreen(), name: "gridViewScreen"),
+            button(page: PageViewScreen(), name: "pageViewScreen"),
           ],
         ),
       ),
