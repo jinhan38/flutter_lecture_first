@@ -9,13 +9,7 @@ class UiExamScreen extends StatefulWidget {
 
 class _UiExamScreenState extends State<UiExamScreen> {
   final PageController pageController = PageController(viewportFraction: 0.9);
-
-  int currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  int _currentIndex = 0;
 
   @override
   void dispose() {
@@ -29,6 +23,7 @@ class _UiExamScreenState extends State<UiExamScreen> {
       backgroundColor: Colors.white,
       appBar: _appBar(),
       body: _body(),
+      bottomNavigationBar: _bottomNav(),
     );
   }
 
@@ -49,16 +44,23 @@ class _UiExamScreenState extends State<UiExamScreen> {
   }
 
   Widget _body() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          _top(),
-          const SizedBox(height: 20),
-          _middle(),
-          const SizedBox(height: 20),
-          ..._bottom(),
-        ],
-      ),
+    return IndexedStack(
+      index: _currentIndex,
+      children: [
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              _top(),
+              const SizedBox(height: 20),
+              _middle(),
+              const SizedBox(height: 20),
+              ..._bottom(),
+            ],
+          ),
+        ),
+        Center(child: Text("두번째",style: TextStyle(fontSize: 30),)),
+        Center(child: Text("세번째",style: TextStyle(fontSize: 30),)),
+      ],
     );
   }
 
@@ -127,7 +129,7 @@ class _UiExamScreenState extends State<UiExamScreen> {
         controller: pageController,
         itemCount: imageList.length,
         itemBuilder: (context, index) {
-          int currentPage = pageController.page!.ceil();
+          // int currentPage = pageController.page!.ceil();
           return Container(
             margin: const EdgeInsets.symmetric(horizontal: 5),
             decoration: BoxDecoration(
@@ -156,5 +158,41 @@ class _UiExamScreenState extends State<UiExamScreen> {
         contentPadding: const EdgeInsets.symmetric(horizontal: 12),
       );
     });
+  }
+
+  Widget _bottomNav() {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      onTap: (value) {
+        setState(() {
+          _currentIndex = value;
+        });
+      },
+
+      showSelectedLabels: true,
+      showUnselectedLabels: false,
+      backgroundColor: Colors.orange.shade50,
+      iconSize: 30,
+      selectedItemColor: Colors.pink,
+      unselectedItemColor: Colors.grey.shade500,
+      // type: BottomNavigationBarType.shifting,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home_outlined),
+          activeIcon: Icon(Icons.home),
+          label: "홈",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.alarm_off),
+          activeIcon: Icon(Icons.access_alarm),
+          label: "알림",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_outline),
+          activeIcon: Icon(Icons.person),
+          label: "친구",
+        ),
+      ],
+    );
   }
 }
