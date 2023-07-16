@@ -1,0 +1,4 @@
+Context(BuildContext)
+
+Context 다른 프레임워크에서도 존재하는 개념.
+Context는 주소와 같다.

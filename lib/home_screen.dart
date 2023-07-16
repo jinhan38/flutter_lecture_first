@@ -16,6 +16,7 @@ import 'ch4/text_form_field_screen.dart';
 import 'ch5/default_tab_controller_screen.dart';
 import 'ch5/pageview_screen.dart';
 import 'ch5/ui_exam.dart';
+import 'ch6/route_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,26 +35,33 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            button(page: ContainerScreen(), name: "container"),
-            button(page: ColumnScreen(), name: "column"),
-            button(page: RowScreen(), name: "row"),
-            button(page: ScaffoldScreen(), name: "scaffold"),
-            button(page: TextScreen(), name: "text"),
-            button(page: ImageScreen(), name: "image"),
-            button(page: ButtonScreen(), name: "button"),
-            button(page: TextFormFieldScreen(), name: "textFormField"),
-            button(page: SingleScrollScreen(), name: "singleScrollScreen"),
-            button(page: ListViewScreen(), name: "listViewScreen"),
-            button(page: GridViewScreen(), name: "gridViewScreen"),
-            button(page: PageViewScreen(), name: "pageViewScreen"),
-            button(page: TabBarScreen(), name: "tabBarScreen"),
+            button(page: const ContainerScreen(), name: "container"),
+            button(page: const ColumnScreen(), name: "column"),
+            button(page: const RowScreen(), name: "row"),
+            button(page: const ScaffoldScreen(), name: "scaffold"),
+            button(page: const TextScreen(), name: "text"),
+            button(page: const ImageScreen(), name: "image"),
+            button(page: const ButtonScreen(), name: "button"),
+            button(page: const TextFormFieldScreen(), name: "textFormField"),
             button(
-                page: DefaultTabControllerScreen(),
+                page: const SingleScrollScreen(), name: "singleScrollScreen"),
+            button(page: const ListViewScreen(), name: "listViewScreen"),
+            button(page: const GridViewScreen(), name: "gridViewScreen"),
+            button(page: const PageViewScreen(), name: "pageViewScreen"),
+            button(page: const TabBarScreen(), name: "tabBarScreen"),
+            button(
+                page: const DefaultTabControllerScreen(),
                 name: "defaultTabControllerScreen"),
-            button(page: UiExamScreen(), name: 'UiExamScreen'),
+            button(page: const UiExamScreen(), name: 'UiExamScreen'),
             button(
-                page: BottomNavigationBarScreen(),
+                page: const BottomNavigationBarScreen(),
                 name: 'BottomNavigationBarScreen'),
+            button(page: const RouteScreen(), name: 'RouteScreen'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/first");
+                },
+                child: Text('RouteNamedScreen')),
           ],
         ),
       ),
@@ -78,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         child: Text(
           name,
-          style: TextStyle(fontSize: 24),
+          style: const TextStyle(fontSize: 24),
         ),
       ),
     );
