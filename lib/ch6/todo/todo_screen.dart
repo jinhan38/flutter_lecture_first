@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lecture_first/ch7/news/news_model.dart';
 
 import 'todo_model.dart';
 
