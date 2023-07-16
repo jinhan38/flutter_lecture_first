@@ -16,6 +16,7 @@ import 'ch4/text_form_field_screen.dart';
 import 'ch5/default_tab_controller_screen.dart';
 import 'ch5/pageview_screen.dart';
 import 'ch5/ui_exam.dart';
+import 'ch6/dialog_screen.dart';
 import 'ch6/route_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -62,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, "/first");
                 },
                 child: Text('RouteNamedScreen')),
+            button(page: DialogScreen(), name: "DialogScreen"),
           ],
         ),
       ),
