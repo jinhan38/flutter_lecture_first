@@ -9,6 +9,8 @@ import 'package:flutter_lecture_first/ch4/listview_screen.dart';
 import 'package:flutter_lecture_first/ch5/bottom_navigation_bar_screen.dart';
 import 'package:flutter_lecture_first/ch5/tabbar_screen.dart';
 import 'package:flutter_lecture_first/ch6/todo/todo_screen.dart';
+import 'package:flutter_lecture_first/ch7/json_screen.dart';
+import 'package:flutter_lecture_first/ch7/news_screen.dart';
 
 import 'ch3/column_screen.dart';
 import 'ch3/row_screen.dart';
@@ -66,6 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text('RouteNamedScreen')),
             button(page: DialogScreen(), name: "DialogScreen"),
             button(page: TodoScreen(), name: "TodoScreen"),
+            button(page: NewsScreen(), name: "NewsScreen"),
+            button(page: JsonScreen(), name: "JsonScreen"),
           ],
         ),
       ),

@@ -1,0 +1,27 @@
+{
+  "id": "jinhan38@naver.com",
+  "number": 1,
+  "info": {
+    "age": 35,
+    "weight": 80,
+    "name": "김진한",
+    "description": {
+      "career": "developer",
+      "when": "2020-01-01"
+    }
+  },
+  "framework": [
+    {
+      "email": "jinhan38@naver.com",
+      "platform": "flutter"
+    },
+    {
+      "email": "jinhan38@naver.com",
+      "platform": "Spring"
+    },
+    {
+      "email": "jinhan38@naver.com",
+      "platform": "Next.js"
+    }
+  ]
+}
