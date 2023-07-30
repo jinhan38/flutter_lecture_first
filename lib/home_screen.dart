@@ -12,6 +12,8 @@ import 'package:flutter_lecture_first/ch6/todo/todo_screen.dart';
 import 'package:flutter_lecture_first/ch7/future_screen.dart';
 import 'package:flutter_lecture_first/ch7/json_screen.dart';
 import 'package:flutter_lecture_first/ch7/news_screen.dart';
+import 'package:flutter_lecture_first/ch8/get_x_screen.dart';
+import 'package:flutter_lecture_first/ch8/open_api_screen.dart';
 
 import 'ch3/column_screen.dart';
 import 'ch3/row_screen.dart';
@@ -72,6 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
             button(page: NewsScreen(), name: "NewsScreen"),
             button(page: JsonScreen(), name: "JsonScreen"),
             button(page: FutureScreen(), name: "FutureScreen"),
+            button(page: OpenApiScreen(), name: "OpenApiScreen"),
+            button(page: GetXScreen(), name: "GetXScreen"),
           ],
         ),
       ),
