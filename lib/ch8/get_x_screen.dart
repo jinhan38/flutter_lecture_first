@@ -20,14 +20,16 @@ class _GetXScreenState extends State<GetXScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Obx(() {
-            return Center(
-              child: Text(
-                MyController.to.count.value.toString(),
-                style: const TextStyle(fontSize: 30),
-              ),
-            );
-          }),
+          Obx(
+            () {
+              return Center(
+                child: Text(
+                  MyController.to.count.value.toString(),
+                  style: const TextStyle(fontSize: 30),
+                ),
+              );
+            },
+          ),
           ElevatedButton(
             onPressed: () {
               MyController.to.countUp();

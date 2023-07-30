@@ -13,6 +13,7 @@ import 'package:flutter_lecture_first/ch7/future_screen.dart';
 import 'package:flutter_lecture_first/ch7/json_screen.dart';
 import 'package:flutter_lecture_first/ch7/news_screen.dart';
 import 'package:flutter_lecture_first/ch8/get_x_screen.dart';
+import 'package:flutter_lecture_first/ch8/notifier_screen.dart';
 import 'package:flutter_lecture_first/ch8/open_api_screen.dart';
 
 import 'ch3/column_screen.dart';
@@ -76,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
             button(page: FutureScreen(), name: "FutureScreen"),
             button(page: OpenApiScreen(), name: "OpenApiScreen"),
             button(page: GetXScreen(), name: "GetXScreen"),
+            button(page: NotifierScreen(), name: "NotifierScreen"),
           ],
         ),
       ),
